@@ -1,16 +1,55 @@
-# NLP- 
+# NLP Recipes and Text ML
 
-In this repository, there are many NLP tasks, however, small projects which can be mixed with other approaches to make a beneficial API
+Applied NLP notebooks covering sentiment analysis, summarization, classification, information retrieval, and sequence modeling. Adapted from *Natural Language Processing Recipes* (Kulkarni and Shivananda) with custom extensions.
 
-This is a rework of the book Natural Language Processing Recipes - Unlocking text data with machine learning [1] and Some of the derived ideas to implement these in real world. 
+## Problem
 
-I thank the Authors; Akshay Kulkarni and Adarsha Shivananda, for their book and apt explanation presented in this book which can be leveraged by beginners in NLP and get the ground running. 
+Demonstrate end-to-end NLP workflows from raw text to deployed models across common business use cases.
 
-Additionally, the codes here are derived from many other sources to generate solutions to perplexing problems using ML and NLP. 
+## Approach
 
+| Notebook | Use case |
+|----------|----------|
+| Sentiment Analysis.ipynb | Polarity classification |
+| Summarizing the data - TextRank.ipynb | Extractive summarization |
+| Resume matching .ipynb | Semantic job-resume matching |
+| Predicting next Word LSTM .ipynb | Language modeling |
+| chat generator.ipynb | Conversational text generation |
+| Clustering Documents.ipynb | Unsupervised topic grouping |
+| Classification using Neural Network.ipynb | Multi-class text classification |
+| Text Similarity.ipynb | Embedding-based similarity |
 
+## Reproducibility
 
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter lab
+```
 
+Download NLTK corpora if needed:
 
-Reference: 
-  1. Kulkarni, A., & Shivananda, A. (2019). Natural language processing recipes: Unlocking text data with machine learning and deep learning using Python
+```python
+import nltk
+nltk.download("punkt")
+nltk.download("stopwords")
+```
+
+## Tech stack
+
+Python 3, Jupyter, NLTK, scikit-learn, TensorFlow/PyTorch (notebook-specific)
+
+## Overlap note
+
+Several notebooks mirror [Personal-Projects](https://github.com/baban9/Personal-Projects). Treat this repo as the NLP-focused index; Personal-Projects covers broader ML domains.
+
+## Limitations and next steps
+
+- Extract shared preprocessing into a `nlp_utils/` package
+- Add pytest smoke tests for each notebook's import cells
+- Consolidate duplicate notebooks into one canonical repo
+
+## Reference
+
+Kulkarni, A. and Shivananda, A. *Natural Language Processing Recipes*. Packt Publishing.
